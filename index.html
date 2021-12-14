@@ -1,6 +1,11 @@
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Special+Elite&display=swap");
+  body{
+    background: #F9F2E5;
+  }
   h1{
-    font-family: Georgia, serif;
+    font-family: "Inconsolata", monospace;
+    font-weight: 500pt;
     font-size: 40pt;
     padding-block: 10pt;
     padding-left: 10pt;
@@ -9,7 +14,7 @@
     top: 30px; left: 200px
   }
   h2 {
-    font-family: Georgia, serif;
+    font-family: "Inconsolata", monospace;
     font-weight: lighter;
     font-size: 12pt;
     padding-block: 10pt;
@@ -21,13 +26,13 @@
     top: 20px; left: 130px;
   }
   h3{
-    font-family: Georgia, serif;
+    font-family: "Inconsolata", monospace;
     font-weight: lighter;
     font-size: 15pt;
     padding-left: 10pt;
     padding-right: 10pt;
     position: relative;
-    top: 20px; left: 60px;
+    top: 20px; left: 25px;
   }
   input.folder {
     width: 100px;
@@ -70,6 +75,18 @@
   text-decoration: none;
   cursor: pointer;
 }
+  .close2 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+  .close2:hover
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
   
 </style>
 
@@ -85,13 +102,24 @@ Here's where you can find out.
 
 
 <input type="image" id="fldr" class="folder" src="folder.png" alt="folder">
-
+<input type="image" id="fldr2" class="folder" src="folder.png" alt="folder">
+  
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+  <!-- The Modal -->
+<div id="myModal2" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close2">&times;</span>
     <p>Some text in the Modal..</p>
   </div>
 
@@ -117,6 +145,28 @@ window.onclick = function(event) {
   if (event.target === modal) {
     modal.style.display = "none";
   }
+}
+{
+// Get the modal
+let modal = document.getElementById("myModal2");
+// Get the button that opens the modal
+let btn = document.getElementById("fldr2");
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close2")[0];
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
 }
 </script>
 
