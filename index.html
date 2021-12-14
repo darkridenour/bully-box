@@ -69,7 +69,7 @@
   width: 80%;
 }
 .card{
-    width: 80%;
+    width: 600px;
   }
 /* The Close Button */
 .close {
@@ -124,6 +124,14 @@
   	z-index: 5;
   position: absolute;
   top: 180px; left: 150px;
+  }
+.content{
+  position: absolute;
+  top: 245px; left: 400px;
+  }
+.type{
+    position: absolute;
+  top: 245px; left: 270px;
   }
   
 </style>
@@ -182,6 +190,16 @@ Here's where you can find out.
   <option value="instagram">instagram</option>
   <option value="tiktok">tiktok</option>
   <option value="snapchat">snapchat</option>
+</select>
+    <select name="type" class="type">
+  <option value="posted">posted</option>
+  <option value="commented">commented</option>
+  <option value="made">made</option>
+</select>
+  <select name="content" class="content">
+  <option value="hateful">hateful</option>
+  <option value="stupid">stupid</option>
+  <option value="ignorent">ignorent</option>
 </select>
   </div>
 
