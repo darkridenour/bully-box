@@ -38,6 +38,12 @@
     width: 100px;
     position: relative;
     top: 80px; left: 100px;
+    
+  }
+ input.submit {
+    width: 100px;
+    position: relative;
+    top: 240px; left: 50px;
   }
   /* The Modal (background) from W3 schools */
 .modal {
@@ -62,6 +68,9 @@
   border: 1px solid #888;
   width: 80%;
 }
+.card{
+    width: 100%;
+  }
 /* The Close Button */
 .close {
   color: #aaaaaa;
@@ -87,6 +96,30 @@
   text-decoration: none;
   cursor: pointer;
 }
+.close3 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close3:hover,
+.close3:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close4 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close4:hover,
+.close4:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
   
 </style>
 
@@ -103,6 +136,8 @@ Here's where you can find out.
 
 <input type="image" id="fldr" class="folder" src="folder.png" alt="folder">
 <input type="image" id="fldr2" class="folder" src="folder.png" alt="folder">
+<input type="image" id="fldr3" class="folder" src="folder.png" alt="folder">
+<input type="image" id="fldr4" class="submit" src="folder.png" alt="folder">
   
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -110,7 +145,7 @@ Here's where you can find out.
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
+    <img src="card1.jpg" class="card" alt="scanned citation card">
   </div>
 
 </div>
@@ -120,7 +155,23 @@ Here's where you can find out.
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close2">&times;</span>
-    <p>Some text in the Modal..</p>
+    <img src="card2.jpg" class="card" alt="scanned citation card">
+  </div>
+
+</div>
+<div id="myModal3" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close3">&times;</span>
+    <img src="card3.jpg" class="card" alt="scanned citation card">
+  </div>
+
+</div>
+<div id="myModal4" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close4">&times;</span>
+    <img src="card.jpg" class="card" alt="blank citation card">
   </div>
 
 </div>
@@ -153,6 +204,50 @@ let modal = document.getElementById("myModal2");
 let btn = document.getElementById("fldr2");
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close2")[0];
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+}
+{
+// Get the modal
+let modal = document.getElementById("myModal3");
+// Get the button that opens the modal
+let btn = document.getElementById("fldr3");
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close3")[0];
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+}
+{
+// Get the modal
+let modal = document.getElementById("myModal4");
+// Get the button that opens the modal
+let btn = document.getElementById("fldr4");
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close4")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
